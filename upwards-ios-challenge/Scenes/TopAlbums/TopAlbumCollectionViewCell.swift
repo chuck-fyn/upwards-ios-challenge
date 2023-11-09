@@ -91,6 +91,8 @@ class TopAlbumCollectionViewCell: UICollectionViewCell {
     }
     
     private func loadAlbumArt(artURL: String) {
+        //Set default image while album art loads
+        albumArt.image = UIImage(named: "emptyAlbum")
         //Load Album art images asynchronously
         let url = URL(string:artURL)
         DispatchQueue.global().async {
